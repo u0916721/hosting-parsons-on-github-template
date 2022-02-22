@@ -8,7 +8,7 @@ title: Multiple Parson's Problems on One Page
 # Parsons Practice
 
 ## Parsons Iterative
-A biologist wants you to write some code that simulates animal population growth. The code returns the population before it crashes(no more food).
+A biologist wants you to write some code that simulates invasive animal population growth. The code returns the population before it crashes(no more food). Every season the food amount grows by 2000, but the population doubles if they have enough food.
 <div id="rec-sortableTrash" class="sortable-code"></div> 
 <div id="rec-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
