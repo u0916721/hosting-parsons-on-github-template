@@ -9,41 +9,42 @@ title: Multiple Parson's Problems on One Page
 
 ## Parsons Iterative
 A biologist wants you to write some code that simulates animal population growth. The code returns the population before it crashes(no more food).
-<div id="itt-sortableTrash" class="sortable-code"></div> 
-<div id="itt-sortable" class="sortable-code"></div> 
+<div id="rec-sortableTrash" class="sortable-code"></div> 
+<div id="rec-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
-    <input id="itt-feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="itt-newInstanceLink" value="Reset Problem" type="button" /> 
+    <input id="rec-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="rec-newInstanceLink" value="Reset Problem" type="button" /> 
 </p> 
 <script type="text/javascript"> 
 (function(){
   var initial = "public static int populationGrowth(int food,int population)\n" +
     "    {\n" +
-    "        while(food - population &gt; 0)//Does the population have enough food?\n" +
+    "        while(food - population &gt; 0)\n" +
     "        {\n" +
-    "        food = food - population + 2000;//Food is consumed and nature also generates food\n" +
-    "        population = population * 2; //population grows AFTER food is consumed\n" +
+    "        food = food - population + 2000; //Population eats\n" +
+    "        population = population * 2;//population grows after eating\n" +
     "        }\n" +
     "         return population;\n" +
     "    }";
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "itt-sortable",
+    "sortableId": "rec-sortable",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": false,
     "x_indent": 0,
     "lang": "en",
-    "show_feedback": true
+    "show_feedback": true,
+    "trashId": "rec-sortableTrash"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#itt-newInstanceLink").click(function(event){ 
+  $("#rec-newInstanceLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.shuffleLines(); 
   }); 
-  $("#itt-feedbackLink").click(function(event){ 
+  $("#rec-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
