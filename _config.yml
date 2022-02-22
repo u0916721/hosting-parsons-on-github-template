@@ -32,8 +32,9 @@ twitter_username:
 github_username:
 
 # Build settings
-theme: barebones
-plugins:  - jekyll-feed
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
