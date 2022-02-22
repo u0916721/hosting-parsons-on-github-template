@@ -52,6 +52,7 @@ A biologist wants you to write some code that simulates invasive animal populati
 </script>
 ## Parsons Recursive
 Consider the solution above, the same thing can be done with recursion
+ WARNING, there are some bad code blocks here
 <div id="rec-sortableTrash" class="sortable-code"></div> 
 <div id="rec-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
