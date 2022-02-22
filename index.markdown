@@ -9,12 +9,12 @@ title: Multiple Parson's Problems on One Page
 
 ## Parsons Iterative
 A biologist wants you to write some code that simulates invasive animal population growth. The code returns the population before it crashes(no more food). Every season the food amount grows by 2000, but the population doubles if they have enough food.
-<div id="rec-sortableTrash" class="sortable-code"></div> 
-<div id="rec-sortable" class="sortable-code"></div> 
+<div id="itt-sortableTrash" class="sortable-code"></div> 
+<div id="itt-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
 <p> 
-    <input id="rec-feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="rec-newInstanceLink" value="Reset Problem" type="button" /> 
+    <input id="itt-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="itt-newInstanceLink" value="Reset Problem" type="button" /> 
 </p> 
 <script type="text/javascript"> 
 (function(){
@@ -26,9 +26,10 @@ A biologist wants you to write some code that simulates invasive animal populati
     "        population = population * 2;//population grows after eating\n" +
     "        }\n" +
     "         return population;\n" +
-    "    }";
+    "    }\n" +
+    "//This is bad code #distractor";
   var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "rec-sortable",
+    "sortableId": "itt-sortable",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
@@ -36,15 +37,15 @@ A biologist wants you to write some code that simulates invasive animal populati
     "x_indent": 0,
     "lang": "en",
     "show_feedback": true,
-    "trashId": "rec-sortableTrash"
+    "trashId": "itt-sortableTrash"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#rec-newInstanceLink").click(function(event){ 
+  $("#itt-newInstanceLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.shuffleLines(); 
   }); 
-  $("#rec-feedbackLink").click(function(event){ 
+  $("#itt-feedbackLink").click(function(event){ 
       event.preventDefault(); 
       parsonsPuzzle.getFeedback(); 
   }); 
