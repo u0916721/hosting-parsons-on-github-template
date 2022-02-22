@@ -26,8 +26,7 @@ A biologist wants you to write some code that simulates invasive animal populati
     "        population = population * 2;//population grows after eating\n" +
     "        }\n" +
     "         return population;\n" +
-    "    }\n" +
-    "//This is bad code #distractor";
+    "    }";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "itt-sortable",
     "max_wrong_lines": 10,
